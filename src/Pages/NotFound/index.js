@@ -4,7 +4,7 @@ import PageLoader from 'modules/PageLoader';
 import Layout from 'components/Layout';
 import { Title } from 'theme';
 import { NavLink } from 'react-router-dom';
-import routePaths from 'Router/routePaths';
+import routePaths from 'Router/routes';
 
 
 const NotFound = memo((props) => {

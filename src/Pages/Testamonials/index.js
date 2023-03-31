@@ -6,25 +6,25 @@ import { SubHeading, Title } from 'theme';
 
 
 
-const ComingSoon = memo((props) => {
+const Testamonials = memo((props) => {
     const { setPageTitle } = useHostStore();
 
     useEffect(() => {
-        setPageTitle('ComingSoon');
+        setPageTitle('Testamonials');
     }, [])
 
     return (
         <PageLoader>
             <Layout layoutStyle={['Flex', 'CenterX', 'CenterY', 'FullH']}>
-                <Title level={1}>ComingSoon</Title>
+                <Title level={1}>Testamonials</Title>
                 <SubHeading>Ed Spurrier</SubHeading>
             </Layout>
         </PageLoader>
     );
 });
 
-ComingSoon.displayName = 'ComingSoon';
+Testamonials.displayName = 'Testamonials';
 
-ComingSoon.propTypes = {};
+Testamonials.propTypes = {};
 
-export default ComingSoon;
+export default Testamonials;

@@ -1,18 +1,26 @@
 import React from 'react';
-import routePaths from './routePaths';
 // Import routes from remote Apps here....
 
 
-// LOCAL PAGES
-const Welcome = React.lazy(() => import('Pages/Welcome'));
-const NotFound = React.lazy(() => import('Pages/NotFound'));
-const Wiki = React.lazy(() => import('Pages/Wiki'));
-const ComingSoon = React.lazy(() => import('Pages/ComingSoon'));
+//  LOCAL PAGES
+const Welcome     = React.lazy(() => import('Pages/Welcome'));
+const NotFound    = React.lazy(() => import('Pages/NotFound'));
+const Creations     = React.lazy(() => import('Pages/Creations'));
+const Experience    = React.lazy(() => import('Pages/Experience'));
+const Skills        = React.lazy(() => import('Pages/Skills'));
+const Testamonials  = React.lazy(() => import('Pages/Testamonials'));
+const ComingSoon  = React.lazy(() => import('Pages/ComingSoon'));
 
-// LOCAL APPS
-
-// Export routepaths for remote Apps
-export const paths = routePaths;
+//  ROUTE PATHS
+//  Export paths for remote Apps
+export const routePaths = {
+  welcome: '/welcome',
+  creations: '/creations',
+  experience: '/experience',
+  skills: '/skills',
+  testamonials: '/testamonials',
+  comingSoon: '/comingSoon',
+};
 
 
 const localRoutes = [
@@ -29,9 +37,27 @@ const localRoutes = [
     exact: true,
   },
   {
-    name: 'wiki',
-    path: routePaths.wiki,
-    component: <Wiki />,
+    name: 'creations',
+    path: routePaths.creations,
+    component: <Creations />,
+    exact: true,
+  },
+  {
+    name: 'experience',
+    path: routePaths.experience,
+    component: <Experience />,
+    exact: true,
+  },
+  {
+    name: 'skills',
+    path: routePaths.skills,
+    component: <Skills />,
+    exact: true,
+  },
+  {
+    name: 'testamonials',
+    path: routePaths.testamonials,
+    component: <Testamonials />,
     exact: true,
   },
   {
@@ -45,7 +71,7 @@ const localRoutes = [
 
 
 const remoteRoutes = [
-  /* Add remote routes here*/
+  /* Add imported remote routes here */
 ];
 
 

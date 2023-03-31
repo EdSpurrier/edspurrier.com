@@ -8,7 +8,7 @@ const Head = () => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Ed Spurrier{pageTitle&& ` - ${pageTitle}`}</title>
+      <title>{pageTitle&& ` - ${pageTitle}`}</title>
     </Helmet>
   )
 }

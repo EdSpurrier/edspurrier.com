@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from 'zustand';
-import routePaths from '../Router/routePaths';
+import routePaths from 'Router/routes';
 import produce from 'immer'
 
 const useHostStore = create((set) => ({

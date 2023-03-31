@@ -1,30 +1,28 @@
 import React from 'react';
 import { create } from 'zustand';
-import { CodepenOutlined, ProfileOutlined, ShopOutlined } from 'slaydtheme';
 import routePaths from '../Router/routePaths';
 import produce from 'immer'
 
 const useHostStore = create((set) => ({
-    pageTitle: 'Ark',
+    pageTitle: 'Ed Spurrier',
     centerTitle: '',
     noticeTitle: '',
 
-    currentProjectId: localStorage.getItem('currentProjectId'),
     currentLocation: '',
     
     mainNavigation: {
         links: [
             {
                 label: 'Item 1',
-                icon: <ProfileOutlined />,
-                path: routePaths.portfolio + '/dashboard',
+                icon: <></>,
+                path: routePaths.welcome,
                 allowed: true,
             },
             {
-                label: 'Configurator',
-                icon: <CodepenOutlined />,
-                path: routePaths.configure,
-                allowed: localStorage.getItem('currentProjectId'),
+                label: 'Item 2',
+                icon: <></>,
+                path: routePaths.welcome,
+                allowed: true,
             }
             
         ]
@@ -76,10 +74,7 @@ const useHostStore = create((set) => ({
         set({ noticeTitle: newNoticeTitle })
     },
 
-    setCurrentProjectId: (newCurrentProjectId) => {
-        set({ currentProjectId: newCurrentProjectId });
-        localStorage.setItem('currentProjectId',newCurrentProjectId);
-    }
+
 }))
 
 export default useHostStore;

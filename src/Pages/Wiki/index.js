@@ -1,9 +1,9 @@
 import React, { memo, useEffect } from 'react';
 import useHostStore from "host/hostStore";
 import styled from 'styled-components';
-import { Title } from 'slaydtheme';
-import PageLoader from '../../modules/PageLoader';
-import Layout from '../../components/Layout';
+import { Title } from 'theme';
+import PageLoader from 'modules/PageLoader';
+import Layout from 'components/Layout';
 
 const Section = styled.section`
     text-align: center;

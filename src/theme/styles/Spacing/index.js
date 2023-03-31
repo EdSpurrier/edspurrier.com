@@ -1,9 +1,8 @@
 import { css } from "styled-components";
-import ArkTheme from "../../ArkTheme";
 
 
 //   Spacing
-export const SpacingStyles = {
+export const Spacing = {
 
   ResetPadding: css`
       padding: 0px;

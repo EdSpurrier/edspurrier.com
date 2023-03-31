@@ -5,7 +5,6 @@ This is the host application BoilerPlate for the Micro FrontEnds
 
 ## Frameworks Used
 
-- SlaydTheme [Custom NPM Theme](https://www.npmjs.com/package/slaydtheme)
 - ReactJS (18)
 - Module Federation
 - Styled-Components

@@ -29,6 +29,7 @@ const sizes = {
     },
 
     mobile : {
+        
         nav: {
             main: {
                 height: 50

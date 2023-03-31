@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react';
 import useHostStore from "host/hostStore";
-import PageLoader from '../../modules/PageLoader';
-import Layout from '../../components/Layout';
+import PageLoader from 'modules/PageLoader';
+import Layout from 'components/Layout';
 
 const ComingSoon = memo((props) => {
     const { setPageTitle } = useHostStore();

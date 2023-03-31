@@ -1,10 +1,10 @@
 import React, { memo, useEffect } from 'react';
 import useHostStore from "host/hostStore";
-import PageLoader from '../../modules/PageLoader';
-import Layout from '../../components/Layout';
-import { Title, Button } from 'slaydtheme';
+import PageLoader from 'modules/PageLoader';
+import Layout from 'components/Layout';
+import { Title } from 'theme';
 import { NavLink } from 'react-router-dom';
-import routePaths from '../../Router/routePaths';
+import routePaths from 'Router/routePaths';
 
 
 const NotFound = memo((props) => {
@@ -24,7 +24,7 @@ const NotFound = memo((props) => {
                 <br />
                 <br />
                 <NavLink to={routePaths.welcome}>
-                    <Button type='primary' >Home</Button>
+                    Home
                 </NavLink>
             </Layout>
         </PageLoader>

@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 
 //   Colors
-export const ColorStyles = {
+export const Colors = {
 
     Placeholder: {
 

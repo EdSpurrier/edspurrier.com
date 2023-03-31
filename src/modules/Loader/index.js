@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion";
-import { Flex } from 'slaydtheme';
+import { Flex } from 'theme';
 
 
 const LoaderContainer = styled(motion.div)`
@@ -13,7 +13,7 @@ const LoaderContainer = styled(motion.div)`
 
     return `
         /* Theme & Responsive Styles */
-        height: calc(100vh - ${(theme.responsiveSizes.nav.main.height + 1)}px);
+        height: calc(100vh - ${(theme.responsive.sizes.nav.main.height + 1)}px);
         background: var(--main-bg-color);
     `;
   }

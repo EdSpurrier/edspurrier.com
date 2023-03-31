@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import { Flex } from 'slaydtheme';
+import { Flex } from 'theme';
 
 const Container = styled(motion.div)`
 

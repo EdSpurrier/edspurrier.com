@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 
 //   Position
-export const PositionStyles = {
+export const Position = {
 
   AbsoluteCenter: css`
     top: 50%;

@@ -1,24 +1,21 @@
 import React from 'react';
 import routePaths from './routePaths';
+// Import routes from remote Apps here....
 
 
-const NotFoundRoute = React.lazy(() => import('./NotFoundRoute'));
+// LOCAL PAGES
+const Welcome = React.lazy(() => import('Pages/Welcome'));
+const NotFound = React.lazy(() => import('Pages/NotFound'));
+const Wiki = React.lazy(() => import('Pages/Wiki'));
+const ComingSoon = React.lazy(() => import('Pages/ComingSoon'));
 
-// PAGES
-const Welcome = React.lazy(() => import('../Pages/Welcome'));
-const Onboarding = React.lazy(() => import('../Pages/Onboarding'));
-const NotFound = React.lazy(() => import('../Pages/NotFound'));
-const Wiki = React.lazy(() => import('../Pages/Wiki'));
-const ComingSoon = React.lazy(() => import('../Pages/ComingSoon'));
+// LOCAL APPS
 
-// APPS
-const AppMarketplace = React.lazy(() => import('../Apps/Marketplace'));
-
-
+// Export routepaths for remote Apps
 export const paths = routePaths;
 
 
-const routes = [
+const localRoutes = [
   {
     name: 'root',
     path: '/',
@@ -26,21 +23,9 @@ const routes = [
     exact: true,
   },
   {
-    name: 'onboarding',
-    path: routePaths.onboarding,
-    component: <Onboarding />,
-    exact: true,
-  },
-  {
     name: 'welcome',
     path: routePaths.welcome,
     component: <Welcome />,
-    exact: true,
-  },
-  {
-    name: 'notFound',
-    path: routePaths.notFound,
-    component: <NotFound />,
     exact: true,
   },
   {
@@ -57,6 +42,13 @@ const routes = [
   }
 ];
 
+
+
+const remoteRoutes = [
+  /* Add remote routes here*/
+];
+
+
 export const routeNotFound = {
   name: 'route-not-found',
   path: '*',
@@ -64,4 +56,4 @@ export const routeNotFound = {
   exact: true,
 };
 
-export default routes;
+export default [...localRoutes, ...remoteRoutes, routeNotFound ];

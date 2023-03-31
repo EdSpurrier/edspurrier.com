@@ -1,9 +1,7 @@
 import { css } from "styled-components";
-import ArkTheme from "../../ArkTheme";
-
 
 //   Text
-export const TextStyles = {
+export const Text = {
 
     ResetTitle: css`
         padding: 0px;

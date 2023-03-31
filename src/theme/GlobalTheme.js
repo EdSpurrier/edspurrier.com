@@ -57,14 +57,20 @@ const GlobalThemeStyles = createGlobalStyle`
         color: var(--main-text-color);
         user-select: none;
         font-family: 'DM Sans', sans-serif;
-        font-size: ${props => props.theme.responsive.fonts.sizes.body};
+        font-size: ${props => props.responsive.fonts.body.size}px;
+        font-weight: ${props => props.responsive.fonts.body.weight}px;
         margin: 0;
         padding: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        min-height: calc(100vh - ${props => props.theme.responsive.sizes.nav.main.height}px);
+        min-height: calc(100vh - ${props => props.responsive.sizes.nav.main.height}px);
         max-width: 100vw;
         overflow-x: hidden;
+    }
+
+    p {
+      font-size: ${props => props.responsive.fonts.body.size}px;
+      font-weight: ${props => props.responsive.fonts.body.weight}px;
     }
 
 `;
@@ -131,7 +137,7 @@ export const GlobalTheme = ({ darkMode, children, ...props }) => {
     }}>
       <ResponsiveTheme responsive={getBreakpoint()} />
       <SwitchTheme mode={darkMode ? theme.colors.darkMode : theme.colors.lightMode} />
-      <GlobalThemeStyles />
+      <GlobalThemeStyles responsive={getBreakpoint()} />
       {children}
     </ThemeProvider>
   )

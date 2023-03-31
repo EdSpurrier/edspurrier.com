@@ -47,8 +47,8 @@ export const RowReverse = css`
 `;
 
 
-export const Flex = {
-    Flex : DisplayFlex,
+export const Flex =  {
+    Flex: DisplayFlex,
     Center,
     FlexCenter,
     Column,
